@@ -1,0 +1,58 @@
+  /*WEB.END*/
+
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    min-height: 100vh;
+}
+body.active{
+    background: #ccc;
+}
+
+/*TOGGLE*/
+
+#toggle{
+    position: relative;
+    display: block;
+    height: 160px;
+    width: 320px;
+    background: #222;
+    border-radius: 160px;
+    box-shadow: inset 0 8px 60px rgba(0,0,0,0.5),inset 0px 8px 8px rgba(255,255,255,0.2),inset 0px -4px -4px rgba(255,255,255,0.2);
+    cursor: pointer;
+    transition: 0.5s;
+    transform: scale(0.8);
+}
+
+#toggle.active{
+    background: #ccc;
+    box-shadow: inset 0 2px 60px rgba(0,0,0,0.1),inset 0px 2px 8px rgba(0,0,0,0.1),inset 0px -4px 8px rgba(0,0,0,0.05);
+
+}
+
+#toggle .KeyLight{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 160px;
+    width: 160px;
+    transform: scale(0.9);
+    background: linear-gradient(to bottom,#444,rgba(173,171,171));
+    border-radius: 50%;
+    box-shadow: inset 0 2px 60px rgba(0,0,0,0.5),inset 0px 2px 8px rgba(255,255,255,0.2),inset 0px -4px 8px rgba(255,255,255,0.2);
+    transition: 0.5s;
+}
+
+#toggle.active .KeyLight{
+left: 160px;
+background: linear-gradient(to top,#000,rgba(37,37,37));
+box-shadow: inset 0 8px 20px rgba(0,0,0,0.1),inset 0px 4px 4px rgba(255,255,255,0.1),inset 0px -4px 4px rgba(255,255,255,0.1);
+}
